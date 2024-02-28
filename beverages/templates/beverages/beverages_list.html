@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APK</title>
+</head>
+<body>
+    {% for beverage in beverages %}
+        <h1>Namn: {{beverage.name}}</h1>
+        <h1>Kategori{{beverage.category}}</h1>
+        <h1>Volym{{beverage.volume}}</h1>
+        <h1>Pris{{beverage.price}}</h1>
+        <h1>Apk{{beverage.apk}}</h1>
+        <h1>%{{beverage.percentage}}</h1>
+        <h1>Enhet{{beverage.price_per_unit}}</h1>
+    {% endfor %}
+</body>
+</html>

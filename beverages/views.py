@@ -1,5 +1,12 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import Category, Beverage
 
 def beverages_list(request):
-    return HttpResponse("Hello, Beverages!")
+    """ A view to show all products, including sorting and search queries """
+    beverages = Beverage.objects.all()
+    
+    context = {
+        'beverages': beverages,
+    }
+
+    return render(request, 'beverages/beverages_list.html', context)
