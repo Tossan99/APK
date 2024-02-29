@@ -1,5 +1,8 @@
 {% load static %}
 
+{% url 'home' as home_url %}
+{% url 'beverages' as beverages_url %}
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -41,10 +44,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link {% if request.path == home_url %}active{% endif %}" href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'beverages' %}">Beverages</a>
+                        <a class="nav-link {% if request.path == beverages_url %}active{% endif %}" href="{% url 'beverages' %}">Beverages</a>
                     </li>
                 </ul>
                 <form class="d-flex">
