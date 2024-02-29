@@ -1,14 +1,35 @@
 [
-    {
-        "pk": 2,
-        "model": "beverages.beverage",
-        "fields": {
-          "category": 4,
-          "name": "Norrlands Guld",
-          "image": "http",
-          "volume": 330,
-          "price": 10.99,
-          "percentage": 5.50
-        }
+  {
+    "pk": 1,
+    "model": "beverages.beverage",
+    "fields": {
+      "category": 1,
+      "name": "Norrlands Guld",
+      "volume": 330,
+      "price": 10.99,
+      "percentage": 5.50
     }
+  },
+  {
+    "pk": 2,
+    "model": "beverages.beverage",
+    "fields": {
+      "category": 1,
+      "name": "asd Guld",
+      "volume": 330,
+      "price": 10.99,
+      "percentage": 5.50
+    }
+  },
+  {
+    "pk": 3,
+    "model": "beverages.beverage",
+    "fields": {
+      "category": 1,
+      "name": "asd Guld",
+      "volume": 330,
+      "price": 10.99,
+      "percentage": 5.50
+    }
+  }
 ]

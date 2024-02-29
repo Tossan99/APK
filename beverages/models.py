@@ -22,14 +22,14 @@ class Beverage(models.Model):
     """
     Model for beverages
     """
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
-    name = models.CharField(max_length=100)
-    image = CloudinaryField('image', default='placeholder')
-    volume = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(10000)]) #Volume in ml
-    price = models.DecimalField(max_digits=7, decimal_places=2) #Price in sek
-    percentage = models.DecimalField(max_digits=4, decimal_places=2) #Alcohol percentage
-    apk = models.DecimalField(max_digits=10, decimal_places=2, null=False, editable=False)
-    price_per_unit = models.DecimalField(max_digits=10, decimal_places=2, null=False, editable=False) #Price in sek
+    category = models.ForeignKey('Category', null=True, blank=False, on_delete=models.SET_NULL)
+    name = models.CharField(max_length=100, blank=False)
+    #image = models.URLField(max_length=1024, null=True, blank=True, default='placeholder')
+    volume = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(10000)], blank=False) #Volume in ml
+    price = models.DecimalField(max_digits=7, decimal_places=2, blank=False) #Price in sek
+    percentage = models.DecimalField(max_digits=4, decimal_places=2, blank=False) #Alcohol percentage
+    apk = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+    price_per_unit = models.DecimalField(max_digits=10, decimal_places=2, default=0) #Price in sek
 
     def __str__(self):
         return self.name
@@ -58,8 +58,6 @@ class Beverage(models.Model):
         """
         Override the original save method to set the apk and price_per_unit.
         """
-        if not self.apk:
-            self.apk = self._calculate_apk()
-        if not self.price_per_unit:
-            self.price_per_unit = self._calculate_price_per_unit()
+        self.apk = self._calculate_apk()
+        self.price_per_unit = self._calculate_price_per_unit()
         super().save(*args, **kwargs)
