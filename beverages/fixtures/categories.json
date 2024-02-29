@@ -1,0 +1,34 @@
+[
+    {
+      "pk": 1,
+      "model": "beverages.category",
+      "fields": {
+        "name": "öl",
+        "friendly_name": "Öl"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "beverages.category",
+      "fields": {
+        "name": "vin",
+        "friendly_name": "Vin"
+      }
+    },
+    {
+      "pk": 3,
+      "model": "beverages.category",
+      "fields": {
+        "name": "sprit",
+        "friendly_name": "Sprit"
+      }
+    },
+    {
+      "pk": 4,
+      "model": "beverages.category",
+      "fields": {
+        "name": "cider",
+        "friendly_name": "Cider"
+      }
+    }
+  ]

@@ -1,19 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APK</title>
-</head>
-<body>
-    {% for beverage in beverages %}
-        <h1>Namn: {{beverage.name}}</h1>
-        <h1>Kategori{{beverage.category}}</h1>
-        <h1>Volym{{beverage.volume}}</h1>
-        <h1>Pris{{beverage.price}}</h1>
-        <h1>Apk{{beverage.apk}}</h1>
-        <h1>%{{beverage.percentage}}</h1>
-        <h1>Enhet{{beverage.price_per_unit}}</h1>
-    {% endfor %}
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <section class="container-fluid">
+        <div class="row justify-content-center">
+            {% for beverage in beverages %}
+                <div class="col-sm-5 col-10">
+                    <div class="card my-3 p-4">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="{% static 'images/placeholder.png' %}" class="card-img" alt="Beverage image">
+                            </div>
+                            <div class="col-8 card-body">
+                                <h5 class="card-title">{{beverage.name}}</h5>
+                                <p class="card-text">{{beverage.category}}</p>
+                                <p class="card-text">{{beverage.price}}kr</p>
+                                <p class="card-text">{{beverage.volume}}ml</p>
+                                <p class="card-text">{{beverage.percentage}}%</p></p>
+                                <p class="card-text">Apk {{beverage.apk}}</p>
+                                <p class="card-text">Pris/standardenhet{{beverage.price_per_unit}}kr</p>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="#" class="btn btn-primary mt-3">Lägg till</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock content %}
