@@ -9,13 +9,12 @@
                     <div class="card my-3 p-4">
                         <div class="row">
                             <div class="col-4">
-                                {% if "placeholder" in beverage.image.url %}
-                                    <img class="card-img" src="{% static 'images/placeholder.jpg' %}"
-                                        alt="placeholder image">
+                                {% if  beverage.image_url %}
+                                    <img src="{{beverage.image_url}}" class="card-img" alt="Beverage image">
                                 {% else %}
-                                    <img src="{% static 'images/placeholder.png' %}" class="card-img" alt="Beverage image">
+                                    <img class="card-img" src="{% static 'images/placeholder.png' %}"
+                                    alt="placeholder image">
                                 {% endif %}
-            
                             </div>
                             <div class="col-8 card-body">
                                 <h5 class="card-title">{{beverage.name}}</h5>
@@ -23,8 +22,8 @@
                                 <p class="card-text">{{beverage.price}}kr</p>
                                 <p class="card-text">{{beverage.volume}}ml</p>
                                 <p class="card-text">{{beverage.percentage}}%</p></p>
-                                <p class="card-text">Apk {{beverage.apk}}</p>
-                                <p class="card-text">Pris/standardenhet {{beverage.price_per_unit}}kr</p>
+                                <p class="card-text">Apk {{beverage.calculate_apk}}</p>
+                                <p class="card-text">Pris/standardenhet {{beverage.calculate_price_per_unit}}kr</p>
                             </div>
                         </div>
                         <div>

@@ -4,7 +4,8 @@
     "model": "beverages.beverage",
     "fields": {
       "category": 1,
-      "name": "Norrlands Guld",
+      "image_url": "https://source.unsplash.com/featured/?beerbottle-whitebackgrond",
+      "name": "Beverage 1",
       "volume": 330,
       "price": 10.99,
       "percentage": 5.50
@@ -14,22 +15,168 @@
     "pk": 2,
     "model": "beverages.beverage",
     "fields": {
-      "category": 1,
-      "name": "asd Guld",
-      "volume": 330,
-      "price": 10.99,
-      "percentage": 5.50
+      "category": 2,
+      "image_url": "https://source.unsplash.com/featured/?beerbottle-whitebackgrond",
+      "name": "Beverage 2",
+      "volume": 500,
+      "price": 15.99,
+      "percentage": 7.00
     }
   },
   {
     "pk": 3,
     "model": "beverages.beverage",
     "fields": {
-      "category": 1,
-      "name": "asd Guld",
+      "category": 3,
+      "image_url": "https://source.unsplash.com/featured/?beerbottle-whitebackgrond",
+      "name": "Beverage 3",
       "volume": 330,
-      "price": 10.99,
+      "price": 12.50,
+      "percentage": 4.80
+    }
+  },
+  {
+    "pk": 4,
+    "model": "beverages.beverage",
+    "fields": {
+      "category": 4,
+      "image_url": "https://source.unsplash.com/featured/?beerbottlwhitebackgrond",
+      "name": "Beverage 4",
+      "volume": 750,
+      "price": 20.00,
+      "percentage": 8.50
+    }
+  },
+  {
+    "pk": 5,
+    "model": "beverages.beverage",
+    "fields": {
+      "category": 1,
+      "image_url": "https://source.unsplash.com/featured/?beerbottlewhitebackgrond",
+      "name": "Beverage 5",
+      "volume": 330,
+      "price": 11.99,
+      "percentage": 5.20
+    }
+  },
+  {
+    "pk": 6,
+    "model": "beverages.beverage",
+    "fields": {
+      "category": 2,
+      "image_url": "https://source.unsplash.com/featured/?beerbottlewhitebackgrond",
+      "name": "Beverage 6",
+      "volume": 500,
+      "price": 16.50,
+      "percentage": 7.00
+    }
+  },
+  {
+    "pk": 7,
+    "model": "beverages.beverage",
+    "fields": {
+      "category": 3,
+      "image_url": "https://source.unsplash.com/featured/?tea",
+      "name": "Beverage 7",
+      "volume": 330,
+      "price": 13.25,
+      "percentage": 6.00
+    }
+  },
+  {
+    "pk": 8,
+    "model": "beverages.beverage",
+    "fields": {
+      "category": 4,
+      "image_url": "https://source.unsplash.com/featured/?soda",
+      "name": "Beverage 8",
+      "volume": 750,
+      "price": 22.99,
+      "percentage": 8.80
+    }
+  },
+  {
+    "pk": 9,
+    "model": "beverages.beverage",
+    "fields": {
+      "category": 1,
+      "image_url": "https://source.unsplash.com/featured/?cocktail",
+      "name": "Beverage 9",
+      "volume": 330,
+      "price": 11.50,
+      "percentage": 5.00
+    }
+  },
+  {
+    "pk": 10,
+    "model": "beverages.beverage",
+    "fields": {
+      "category": 2,
+      "image_url": "https://source.unsplash.com/featured/?beer",
+      "name": "Beverage 10",
+      "volume": 330,
+      "price": 12.99,
       "percentage": 5.50
+    }
+  },
+  {
+    "pk": 11,
+    "model": "beverages.beverage",
+    "fields": {
+      "category": 3,
+      "image_url": "https://source.unsplash.com/featured/?wine",
+      "name": "Beverage 11",
+      "volume": 500,
+      "price": 18.75,
+      "percentage": 7.20
+    }
+  },
+  {
+    "pk": 12,
+    "model": "beverages.beverage",
+    "fields": {
+      "category": 4,
+      "image_url": "https://source.unsplash.com/featured/?whiskey",
+      "name": "Beverage 12",
+      "volume": 750,
+      "price": 25.99,
+      "percentage": 9.00
+    }
+  },
+  {
+    "pk": 13,
+    "model": "beverages.beverage",
+    "fields": {
+      "category": 1,
+      "image_url": "https://source.unsplash.com/featured/?juice",
+      "name": "Beverage 13",
+      "volume": 330,
+      "price": 14.99,
+      "percentage": 6.00
+    }
+  },
+  {
+    "pk": 14,
+    "model": "beverages.beverage",
+    "fields": {
+      "category": 2,
+      "image_url": "https://source.unsplash.com/featured/?coffee",
+      "name": "Beverage 14",
+      "volume": 500,
+      "price": 20.50,
+      "percentage": 8.00
+    }
+  },
+  {
+    "pk": 15,
+    "model": "beverages.beverage",
+    "fields": {
+      "category": 3,
+      "image_url": "https://source.unsplash.com/featured/?tea",
+      "name": "Beverage 15",
+      "volume": 750,
+      "price": 28.99,
+      "percentage": 10.00
     }
   }
 ]
